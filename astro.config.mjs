@@ -12,6 +12,6 @@ import { defineConfig } from 'astro/config';
 // ─────────────────────────────────────────────────────────────
 
 export default defineConfig({
-  site: 'https://YOUR-USERNAME.github.io',
+  site: 'https://camp2679.github.io',
   // base: '/personal-site',
 });
