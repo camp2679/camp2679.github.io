@@ -6,7 +6,7 @@
 // ─────────────────────────────────────────────────────────────
 
 export const site = {
-  name: 'Jimmy Matthews',
+  name: 'Jimmy Campbell',
 
   // Shown in small caps under your name on the landing page.
   // Delete the line or set to '' to hide it.
@@ -14,25 +14,23 @@ export const site = {
 
   // Your photo. Put the image file in the `public/` folder and
   // reference it as '/your-file-name.jpg'.
-  photo: '/profile.jpg',
+  photo: '/headshot_20260829.png',
 
   // Alt text for the photo (used by screen readers).
-  photoAlt: 'Portrait of Jimmy Matthews',
+  photoAlt: 'Portrait of Jimmy Campbell',
 
   // Your bio. Each string in this array becomes a paragraph.
   // Two or three short paragraphs reads best.
   bio: [
-    "I'm a researcher working on [your field]. My work focuses on [the one-sentence version of what you study and why it matters].",
-    'Before this I was at [previous institution or role]. I hold a [degree] from [university].',
+    "I am a Ph.D Candidate in Health Services Research, Policy, and Administration at the University of Minnesota.My research focuses on topics in health economics including demand and supply responses to finanical incentives. My job-market paper evaluates how Long-Term Acute Care Hospitals responded to the implementation of site neutral payments for Medicare patients." 
+    "Prior to graduate school I worked as a consultant in the Health Analytics Practice Group at Berry, Dunn, McNeil, and Parker. I received a BA from Providence College in 2017",
   ],
 
   // Links shown as a row under your bio.
   // Delete any you don't want; add any you do.
   links: [
-    { label: 'Email', href: 'mailto:jmatthewc123@gmail.com' },
-    { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=YOUR-ID' },
-    { label: 'ORCID', href: 'https://orcid.org/0000-0000-0000-0000' },
-    { label: 'GitHub', href: 'https://github.com/YOUR-USERNAME' },
+    { label: 'Email', href: 'mailto:camp2679@umn.edu' },
+    { label: 'GitHub', href: 'https://github.com/camp2679' },
   ],
 };
 
