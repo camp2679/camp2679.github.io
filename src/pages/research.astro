@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { publications } from '../data/site.js';
+
+// Turns **your name** into bold text in the author list.
+const bold = (s = '') => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+---
+
+<Base title="Research" description="Selected research articles and publications.">
+  <h1 class="page-title">Research</h1>
+  <p class="page-intro">A selection of published work.</p>
+
+  <ul class="pubs">
+    {
+      publications.map((pub) => (
+        <li class="pub">
+          <h2 class="pub__title">{pub.title}</h2>
+
+          {pub.authors && <p class="pub__authors" set:html={bold(pub.authors)}></p>}
+
+          <p class="pub__meta">
+            {pub.venue && <em>{pub.venue}</em>}
+            {pub.venue && pub.year && ', '}
+            {pub.year}
+          </p>
+
+          {pub.note && <p class="pub__note">{pub.note}</p>}
+
+          {pub.links && pub.links.length > 0 && (
+            <ul class="pub__links">
+              {pub.links.map((link) => (
+                <li>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</Base>
