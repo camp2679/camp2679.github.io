@@ -14,7 +14,7 @@ export const site = {
   ],
 
   cv: {
-    file: '/cv.pdf',
+    file: '/James Campbell - Resume_20260829.pdf',
     updated: 'August 2026',
   },
   // Shown in small caps under your name on the landing page.
