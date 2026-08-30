@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site.js';
+
+const base = import.meta.env.BASE_URL;
+const url = (p) => (base.replace(/\/$/, '') + p) || '/';
+
+const cvUrl = url(site.cv.file);
+---
+
+<Base title="CV" description={`Curriculum vitae for ${site.name}.`}>
+  <div class="cv-head">
+    <div>
+      <h1 class="page-title">Curriculum Vitae</h1>
+      {site.cv.updated && <p class="cv-updated">Last updated {site.cv.updated}</p>}
+    </div>
+
+    <a class="btn" href={cvUrl} download>Download PDF</a>
+  </div>
+
+  <div class="pdf-frame">
+    <object data={cvUrl} type="application/pdf" aria-label={`CV for ${site.name}`}>
+      <p class="pdf-fallback">
+        Your browser can't display the PDF inline.
+        <a href={cvUrl}>Open it in a new tab</a> instead.
+      </p>
+    </object>
+  </div>
+
+  <p class="pdf-note">
+    Trouble viewing it here? <a href={cvUrl} target="_blank" rel="noopener">Open the PDF directly</a>.
+  </p>
+</Base>
