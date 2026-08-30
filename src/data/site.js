@@ -54,7 +54,7 @@ export const publications = [
     venue: 'Medical Care',
     year: 2025,
     links: [
-      { label: 'DOI', href: '10.1097/MLR.0000000000002254' },
+      { label: 'DOI', href: 'https://doi.org/10.1097/MLR.0000000000002254' },
     ],
   },
   {
@@ -62,7 +62,7 @@ export const publications = [
     authors: 'Golberstein E, **Campbell JM**, Maclean JC, Harris SJ, Saloner B, Stein BD',
     venue: 'JAMA Health Forum',
     year: 2024,
-    links: [{ label: 'DOI', href: 'doi:10.1001/jamahealthforum.2024.0198' }],
+    links: [{ label: 'DOI', href: 'https://doi.org/10.1001/jamahealthforum.2024.0198' }],
   },
   {
     title: 'The Future of State All Payer Claims Databases (APCDs)',
