@@ -49,30 +49,26 @@ export const site = {
 
 export const publications = [
   {
-    title: 'The full title of your paper, sentence case is fine',
-    authors: '**J. Matthews**, A. Colleague, B. Coauthor',
-    venue: 'Journal or Conference Name',
+    title: 'Health Insurance and Access to Care after Unemployment in Medicaid Expansion versus non-Expansion States during COVID-19',
+    authors: '**Campbell JM**, Escarce JJ, Runger D, Eisenman D., Huckfeldt PJ',
+    venue: 'Medical Care',
     year: 2025,
-    // Optional one- or two-sentence plain-language summary.
-    // Delete this line if you'd rather keep the list clean.
-    note: 'A short, plain-language note on what this paper found and why it matters.',
     links: [
-      { label: 'PDF', href: '#' },
-      { label: 'DOI', href: '#' },
+      { label: 'DOI', href: '10.1097/MLR.0000000000002254' },
     ],
   },
   {
-    title: 'A second selected publication',
-    authors: 'A. Colleague, **J. Matthews**',
-    venue: 'Another Journal',
+    title: 'Prescription Drug Dispensing and Patient Costs After Implementation of a No Behavioral Health Cost-Sharing Law',
+    authors: 'Golberstein E, **Campbell JM**, Maclean JC, Harris SJ, Saloner B, Stein BD',
+    venue: 'JAMA Health Forum',
     year: 2024,
-    links: [{ label: 'PDF', href: '#' }],
+    links: [{ label: 'DOI', href: 'doi:10.1001/jamahealthforum.2024.0198' }],
   },
   {
-    title: 'A third selected publication',
-    authors: '**J. Matthews**, C. Someone',
-    venue: 'Conference Proceedings',
+    title: 'The Future of State All Payer Claims Databases (APCDs)',
+    authors: 'Blewett LA., Mac Arthur N., **Campbell J**',
+    venue: 'Journal of Health Politics, Policy, and Law',
     year: 2023,
-    links: [{ label: 'DOI', href: '#' }],
+    links: [{ label: 'DOI', href: 'https://doi.org/10.1215/03616878-10171104' }],
   },
 ];
