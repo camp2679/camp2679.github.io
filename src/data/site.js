@@ -7,7 +7,16 @@
 
 export const site = {
   name: 'James M. Campbell',
+  
+  nav: [
+    { label: 'Research', href: '/research' },
+    { label: 'CV', href: '/cv' },
+  ],
 
+  cv: {
+    file: '/cv.pdf',
+    updated: 'August 2026',
+  },
   // Shown in small caps under your name on the landing page.
   // Delete the line or set to '' to hide it.
   tagline: 'Call me Jimmy',
