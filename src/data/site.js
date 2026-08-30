@@ -87,12 +87,10 @@ export const workInProgress = [
     title: 'Site-Neutral Payments and Long-Term Acute Care Hospitals',
     venue: 'Job-market paper',
     year: 2026,
-    links: [{ label: 'Draft', href: '#' }],
   },
   {
-    title: 'A second work in progress',
-    authors: '**J. Campbell**, A. Coauthor',
-    venue: 'Working paper',
+    title: 'Effects of Zero Cost-Sharing for Behavioral Health on Utilization and Spending',
+    authors: 'with Ezra Golberstein, Catherine Maclean, Susan Ettner, Bradley Stein, and Samantha Harris',
     year: 2026,
   },
 ];
