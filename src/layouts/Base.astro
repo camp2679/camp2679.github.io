@@ -30,13 +30,41 @@ const pageTitle = title ? `${title} — ${site.name}` : site.name;
   </head>
 
   <body>
+    {
+      site.banner && (
+        <img
+          class="banner"
+          src={url(site.banner)}
+          alt={site.bannerAlt || ''}
+          style={`--banner-h: ${site.bannerHeight || 'clamp(110px, 18vw, 190px)'}`}
+        />
+      )
+    }
+
     <div class="shell">
       <header class="site-header">
         <a class="site-header__name" href={url('/')}>{site.name}</a>
         <nav class="site-nav" aria-label="Main">
-          <a href={url('/research')} aria-current={isCurrent('/research') ? 'page' : undefined}>
-            Research
-          </a>
+          {
+            site.nav.map((item) => {
+              // A link to another site, or to a file like a PDF, opens in a
+              // new tab and never gets the "current page" underline.
+              const isExternal = /^https?:\/\//.test(item.href);
+              const isFile = /\.[a-z0-9]+$/i.test(item.href);
+              const away = isExternal || isFile;
+
+              return (
+                <a
+                  href={isExternal ? item.href : url(item.href)}
+                  aria-current={!away && isCurrent(item.href) ? 'page' : undefined}
+                  target={away ? '_blank' : undefined}
+                  rel={away ? 'noopener' : undefined}
+                >
+                  {item.label}
+                </a>
+              );
+            })
+          }
         </nav>
       </header>
 
