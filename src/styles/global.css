@@ -83,10 +83,26 @@ a:focus-visible {
    Page shell
    ───────────────────────────────────────────────────────────── */
 
+/* Full-width banner strip. Height comes from `bannerHeight` in
+   src/data/site.js, passed in as --banner-h. */
+.banner {
+  width: 100%;
+  height: var(--banner-h, clamp(110px, 18vw, 190px));
+  object-fit: cover;
+  object-position: center;
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--rule);
+}
+
 .shell {
   max-width: var(--page);
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+/* Tighten the gap when a banner is present. */
+.banner + .shell .site-header {
+  padding-top: 1.75rem;
 }
 
 .site-header {
@@ -217,6 +233,97 @@ main {
 
   main {
     padding: 2.5rem 0 3rem;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CV page
+   ───────────────────────────────────────────────────────────── */
+
+.cv-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  flex-wrap: wrap;
+  margin: 0 0 2rem;
+}
+
+.cv-head .page-title {
+  margin-bottom: 0.25rem;
+}
+
+.cv-updated {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-faint);
+}
+
+.btn {
+  display: inline-block;
+  flex: none;
+  padding: 0.5rem 1.125rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  border-color: var(--accent);
+}
+
+/* The embedded PDF viewer. It breaks out of the narrow text column,
+   since a document page needs more width than a paragraph does. */
+.pdf-frame {
+  width: min(62rem, calc(100vw - 3rem));
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: min(78vh, 1000px);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.pdf-frame object {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.pdf-fallback {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.pdf-note {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-faint);
+}
+
+/* Phones and small tablets handle inline PDFs badly — iOS in
+   particular often renders a blank box. Show the download route
+   instead of a broken frame. */
+@media (max-width: 46rem) {
+  .pdf-frame {
+    display: none;
+  }
+
+  .pdf-note {
+    margin-top: 0;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
   }
 }
 
