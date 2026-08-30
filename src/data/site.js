@@ -66,7 +66,7 @@ export const publications = [
   },
   {
     title: 'The Future of State All Payer Claims Databases (APCDs)',
-    authors: 'Blewett LA., Mac Arthur N., **Campbell J**',
+    authors: 'Blewett LA., Mac Arthur N., **Campbell JM**',
     venue: 'Journal of Health Politics, Policy, and Law',
     year: 2023,
     links: [{ label: 'DOI', href: 'https://doi.org/10.1215/03616878-10171104' }],
