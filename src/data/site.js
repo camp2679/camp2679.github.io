@@ -19,7 +19,7 @@ export const site = {
   },
   // Shown in small caps under your name on the landing page.
   // Delete the line or set to '' to hide it.
-  tagline: 'Call me Jimmy',
+  tagline: '',
 
   // Your photo. Put the image file in the `public/` folder and
   // reference it as '/your-file-name.jpg'.
@@ -31,7 +31,7 @@ export const site = {
   // Your bio. Each string in this array becomes a paragraph.
   // Two or three short paragraphs reads best.
   bio: [
-    "I am a Ph.D. Candidate in Health Services Research, Policy, and Administration at the University of Minnesota. My research focuses on topics in health economics including demand and supply responses to financial incentives. My job-market paper evaluates how Long-Term Acute Care Hospitals responded to the implementation of site neutral payments for Medicare patients.",
+    "I am Jimmy, a Ph.D. Candidate in Health Services Research, Policy, and Administration (Health Economics track) at the University of Minnesota. My research focuses on patient and provider responses to changes in financial incentives. My job-market paper evaluates the impact of Medicare's site neutral payment - the first of it's kind - on the treatement behavior and market structure of Long-Term Acute Care Hospitals.",
     "Prior to graduate school I worked as a consultant in the Health Analytics Practice Group at Berry, Dunn, McNeil, and Parker. I received a BA in 2017 from Providence College, where I was also a member of their track and cross-country teams. Maine Native.",
   ],
 
@@ -39,7 +39,6 @@ export const site = {
   // Delete any you don't want; add any you do.
   links: [
     { label: 'Email', href: 'mailto:camp2679@umn.edu' },
-    { label: 'GitHub', href: 'https://github.com/camp2679' },
   ],
 };
 
