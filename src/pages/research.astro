@@ -1,42 +1,64 @@
 ---
 import Base from '../layouts/Base.astro';
-import { publications } from '../data/site.js';
+import { workInProgress, publications } from '../data/site.js';
+
+const base = import.meta.env.BASE_URL;
+const url = (p) => (base.replace(/\/$/, '') + p) || '/';
 
 // Turns **your name** into bold text in the author list.
 const bold = (s = '') => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+// The two sections, in the order they appear on the page.
+const sections = [
+  { heading: 'Work in Progress', items: workInProgress },
+  { heading: 'Selected Publications', items: publications },
+].filter((s) => s.items && s.items.length > 0);
 ---
 
-<Base title="Research" description="Selected research articles and publications.">
+<Base title="Research" description="Works in progress and selected publications.">
   <h1 class="page-title">Research</h1>
-  <p class="page-intro">A selection of published work.</p>
 
-  <ul class="pubs">
-    {
-      publications.map((pub) => (
-        <li class="pub">
-          <h2 class="pub__title">{pub.title}</h2>
+  <p class="page-intro">
+    Below is my current work in progress as well as a list of select
+    publications. For a full list of my work, please refer to my
+    <a href={url('/cv')}>CV</a>.
+  </p>
 
-          {pub.authors && <p class="pub__authors" set:html={bold(pub.authors)}></p>}
+  {
+    sections.map((section) => (
+      <section class="research-section">
+        <h2 class="section-title">{section.heading}</h2>
 
-          <p class="pub__meta">
-            {pub.venue && <em>{pub.venue}</em>}
-            {pub.venue && pub.year && ', '}
-            {pub.year}
-          </p>
+        <ul class="pubs">
+          {section.items.map((pub) => (
+            <li class="pub">
+              <h3 class="pub__title">{pub.title}</h3>
 
-          {pub.note && <p class="pub__note">{pub.note}</p>}
+              {pub.authors && <p class="pub__authors" set:html={bold(pub.authors)}></p>}
 
-          {pub.links && pub.links.length > 0 && (
-            <ul class="pub__links">
-              {pub.links.map((link) => (
-                <li>
-                  <a href={link.href}>{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))
-    }
-  </ul>
+              {(pub.venue || pub.year) && (
+                <p class="pub__meta">
+                  {pub.venue && <em>{pub.venue}</em>}
+                  {pub.venue && pub.year && ', '}
+                  {pub.year}
+                </p>
+              )}
+
+              {pub.note && <p class="pub__note">{pub.note}</p>}
+
+              {pub.links && pub.links.length > 0 && (
+                <ul class="pub__links">
+                  {pub.links.map((link) => (
+                    <li>
+                      <a href={link.href}>{link.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
 </Base>
