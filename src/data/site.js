@@ -23,7 +23,7 @@ export const site = {
   // Two or three short paragraphs reads best.
   bio: [
     "I am a Ph.D Candidate in Health Services Research, Policy, and Administration at the University of Minnesota.My research focuses on topics in health economics including demand and supply responses to finanical incentives. My job-market paper evaluates how Long-Term Acute Care Hospitals responded to the implementation of site neutral payments for Medicare patients." 
-    "Prior to graduate school I worked as a consultant in the Health Analytics Practice Group at Berry, Dunn, McNeil, and Parker. I received a BA from Providence College in 2017",
+    "Prior to graduate school I worked as a consultant in the Health Analytics Practice Group at Berry, Dunn, McNeil, and Parker. I received a BA from Providence College in 2017"
   ],
 
   // Links shown as a row under your bio.
