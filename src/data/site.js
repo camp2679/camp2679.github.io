@@ -81,3 +81,18 @@ export const publications = [
     links: [{ label: 'DOI', href: 'https://doi.org/10.1215/03616878-10171104' }],
   },
 ];
+
+export const workInProgress = [
+  {
+    title: 'Site-Neutral Payments and Long-Term Acute Care Hospitals',
+    venue: 'Job-market paper',
+    year: 2026,
+    links: [{ label: 'Draft', href: '#' }],
+  },
+  {
+    title: 'A second work in progress',
+    authors: '**J. Campbell**, A. Coauthor',
+    venue: 'Working paper',
+    year: 2026,
+  },
+];
