@@ -83,7 +83,7 @@ export const publications = [
 
 export const workInProgress = [
   {
-    title: 'Site-Neutral Payments and Long-Term Acute Care Hospitals',
+    title: 'Site-Neutral Payments: The Effect on Long-Term Acute Care Hospitals',
     venue: 'Job-market paper',
     year: 2026,
   },
