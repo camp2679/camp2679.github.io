@@ -31,7 +31,7 @@ export const site = {
   // Your bio. Each string in this array becomes a paragraph.
   // Two or three short paragraphs reads best.
   bio: [
-    "I am Jimmy, a Ph.D. Candidate in Health Services Research, Policy, and Administration (Health Economics track) at the University of Minnesota. My research focuses on patient and provider responses to changes in financial incentives. My job-market paper evaluates the impact of Medicare's site neutral payment - the first of it's kind - on the treatement behavior and market structure of Long-Term Acute Care Hospitals.",
+    "I am Jimmy, a Ph.D. Candidate in Health Services Research, Policy, and Administration (Health Economics track) at the University of Minnesota. My research focuses on patient and provider responses to changes in financial incentives. My job-market paper evaluates the impact of Medicare's site neutral payment - the first of it's kind - on the treatment behavior and facility operations of Long-Term Acute Care Hospitals.",
     "Prior to graduate school I worked as a consultant in the Health Analytics Practice Group at Berry, Dunn, McNeil, and Parker. I received a BA in 2017 from Providence College, where I was also a member of their track and cross-country teams. Maine Native.",
   ],
 
