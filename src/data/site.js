@@ -57,7 +57,7 @@ export const workingPapers = [
        I simulate revenue changes at the diagnosis and facility levels that predict policy-induced reimbursement changes using pre-policy patients and post-policy rules. 
        At the facility-level, LTACHs with greater exposure to the policy were more likely to close. Surviving facilities saw reductions in profitability, 
        but were able to mitigate losses by admitting more patients with commercial insurance.`,
-    links: [{ label: 'Paper', href: '/campbell-jmp.pdf' }],
+    links: [{ label: 'Paper', href: '/campbell_jmp.pdf' }],
   },
   {
     title:
