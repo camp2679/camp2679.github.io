@@ -42,18 +42,42 @@ export const site = {
   ],
 };
 
-// ─────────────────────────────────────────────────────────────
-//  PUBLICATIONS
-//
-//  Newest first. Only `title` and `year` are required — every
-//  other field can be deleted if it doesn't apply.
-//
-//  In `authors`, wrap your own name in ** ** to bold it:
-//      'A. Colleague, **J. Matthews**, B. Other'
-//
-//  `links` is a list of {label, href} — use whatever you have:
-//  PDF, DOI, Publisher, Code, Data, Preprint, Slides.
-// ─────────────────────────────────────────────────────────────
+export const workingPapers = [
+  {
+    title: 'Site-Neutral Payments: The Effect on Long-Term Acute Care Hospitals',
+    venue: 'Job-market paper',
+    year: 2026,
+    abstract:
+      `Medicare payment differs for similar services across care settings, creating an incentive for healthcare providers to treat patients
+       where reimbursement is highest and potentially raising costs to the program unnecessarily. Congress has established "site-neutral"
+       policies seeking to align patient clinical need and treatment intensity by decoupling payment from the service location. 
+       Such policies reduce cost, but could also limit access to higher-level care settings for patients who need them. 
+       I study a large Medicare site-neutral payment reform in which Long-Term Acute Care Hospitals - which provide extended hospital-level care - 
+       were reimbursed at the lower, "site-neutral" acute care hospital rate for certain low acuity patients. To evaluate the policy, 
+       I simulate revenue changes at the diagnosis and facility levels that predict policy-induced reimbursement changes using pre-policy patients and post-policy rules. 
+       At the facility-level, LTACHs with greater exposure to the policy were more likely to close. Surviving facilities saw reductions in profitability, 
+       but were able to mitigate losses by admitting more patients with commercial insurance.`,
+    links: [{ label: 'Paper', href: '/campbell-jmp.pdf' }],
+  },
+  {
+    title:
+      'Zero Cost-Sharing for Behavioral Health Services: Effects on Insurance Benefit Design',
+    authors:
+      'with Ezra Golberstein, Catherine Maclean, Susan Ettner, Bradley Stein, Samantha Harris, Brendan Saloner, Kristianny Ruelas-Vargas, and Minna Song',
+    venue: `R&R, Administration and Policy in Mental Health and Mental Health Services Research`,
+    year: 2026,
+  },
+];
+ 
+export const workInProgress = [
+  {
+    title:
+      'Effects of No Cost-Sharing for Mental Health and Substance Use Disorder Treatment on Utilization and Spending',
+    authors:
+      'with Ezra Golberstein, Catherine Maclean, Susan Ettner, Bradley Stein, and Samantha Harris',
+    year: 2026,
+  },
+];
 
 export const publications = [
   {
@@ -78,19 +102,5 @@ export const publications = [
     venue: 'Journal of Health Politics, Policy, and Law',
     year: 2023,
     links: [{ label: 'DOI', href: 'https://doi.org/10.1215/03616878-10171104' }],
-  },
-];
-
-export const workInProgress = [
-  {
-    title: 'Site-Neutral Payments: The Effect on Long-Term Acute Care Hospitals',
-    venue: 'Job-market paper',
-    year: 2026,
-    links: [{ label: 'Paper', href: '/campbell-jmp.pdf'}],
-  },
-  {
-    title: 'Effects of Zero Cost-Sharing for Behavioral Health on Utilization and Spending',
-    authors: 'with Ezra Golberstein, Catherine Maclean, Susan Ettner, Bradley Stein, and Samantha Harris',
-    year: 2026,
   },
 ];
