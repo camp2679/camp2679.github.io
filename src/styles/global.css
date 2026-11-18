@@ -489,7 +489,7 @@ main {
 
 :root {
   --page: 52rem;     /* content column: was 44rem */
-  --measure: 38rem;  /* paragraph width: was 34rem */
+  --measure: 52rem;  /* paragraph width: was 34rem */
 }
 .shell { padding: 0 2.5rem; }          /* side gutters: was 1.5rem */
 main { padding: 5rem 0 6rem; }          /* above/below content: was 3.5rem / 4rem */
@@ -506,3 +506,8 @@ body { line-height: 1.75; }             /* was 1.65 */
 .abstract__body p:last-child {
   margin-bottom: 0;
 }
+
+.bio { max-width: none; }
+.page-intro { max-width: none; }
+.abstract__body { max-width: none; }
+.pub__note { max-width: none; }
