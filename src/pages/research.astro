@@ -8,6 +8,8 @@ const url = (p) => (base.replace(/\/$/, '') + p) || '/';
 // Turns **your name** into bold text in the author list.
 const bold = (s = '') => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
+const paras = (a) => (Array.isArray(a) ? a : [a]);
+
 // The sections, in the order they appear on the page.
 // A section with an empty list is dropped automatically.
 const sections = [
