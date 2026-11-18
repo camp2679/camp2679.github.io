@@ -46,6 +46,17 @@ const sections = [
 
               {pub.note && <p class="pub__note">{pub.note}</p>}
 
+              {pub.abstract && (
+                <details class="abstract">
+                  <summary>Abstract</summary>
+                  <div class="abstract__body">
+                    {paras(pub.abstract).map((para) => (
+                      <p>{para}</p>
+                    ))}
+                  </div>
+                </details>
+              )}
+
               {pub.links && pub.links.length > 0 && (
                 <ul class="pub__links">
                   {pub.links.map((link) => (
