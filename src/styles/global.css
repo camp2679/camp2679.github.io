@@ -473,3 +473,20 @@ main {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+.abstract__body {
+  max-width: var(--measure);
+  margin: 0.75rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--rule);
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+
+.abstract__body p {
+  margin: 0 0 0.75rem;
+}
+
+.abstract__body p:last-child {
+  margin-bottom: 0;
+}
