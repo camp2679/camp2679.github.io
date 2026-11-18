@@ -487,6 +487,22 @@ main {
   margin: 0 0 0.75rem;
 }
 
+:root {
+  --page: 52rem;     /* content column: was 44rem */
+  --measure: 38rem;  /* paragraph width: was 34rem */
+}
+.shell { padding: 0 2.5rem; }          /* side gutters: was 1.5rem */
+main { padding: 5rem 0 6rem; }          /* above/below content: was 3.5rem / 4rem */
+.site-header { padding-top: 3rem; }
+.banner + .shell .site-header { padding-top: 2.5rem; }
+body { line-height: 1.75; }             /* was 1.65 */
+.page-intro { margin-bottom: 4rem; }    /* was 3rem */
+.section-title { margin: 4.5rem 0 2rem; }   /* was 3.25rem / 1.5rem */
+.pub { padding: 2.5rem 0; }             /* was 1.75rem */
+@media (max-width: 34rem) {
+  .shell { padding: 0 1.25rem; }
+  main { padding: 3rem 0 3.5rem; }
+}
 .abstract__body p:last-child {
   margin-bottom: 0;
 }
